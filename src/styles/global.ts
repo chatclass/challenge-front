@@ -9,8 +9,9 @@ export default createGlobalStyle`
 
   html {
     min-height: 100%;
-    background: #fff;
+    background: linear-gradient(180deg, #FF7F00 0%, #FFB600 100%);
     font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
   }
 
   body {
