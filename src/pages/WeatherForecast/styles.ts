@@ -12,8 +12,20 @@ export const WeatherForecastContainer = styled.div`
     border-bottom: 1px solid #fff;
 
     h1 {
-        font-size: 5.6rem;
+        font-size: 5.2rem;
         color: #fff;
+    }
+
+    @media (max-width: 768px) {
+        padding: 3.2rem 0;
+
+        h1 {
+            width: 75%;
+        }
+
+        h1.reduced {
+            font-size: 3.2rem;
+        }
     }
 `;
 
@@ -43,6 +55,14 @@ export const CitySearched = styled.div`
         color: #505050;
 
         margin-top: 1.6rem;
+    }
+
+    @media (max-width: 768px) {
+        padding: 2.4rem 0;
+
+        .day-state {
+            padding: 0 6.4rem;
+        }
     }
 `;
 
@@ -78,14 +98,14 @@ export const ClimeInfos = styled.div`
 
     .min img {
         color: #ff7f00;
-        height: 18px;
-        width: 25px;
+        height: 1.8rem;
+        width: 2.5rem;
     }
 
     .max img {
         color: #ff7f00;
-        height: 18px;
-        width: 25px;
+        height: 1.8rem;
+        width: 2.5rem;
     }
 
     .feels-like strong {
@@ -102,12 +122,12 @@ export const ClimeInfos = styled.div`
 `;
 
 export const SearchCities = styled.div`
-    width: 80%;
+    width: 90%;
     display: flex;
 
     input {
         flex: 9;
-        height: 4rem;
+        height: 4px;
 
         background: #fff;
         padding: 2.4rem;
@@ -119,7 +139,7 @@ export const SearchCities = styled.div`
     }
 
     button {
-        height: 4rem;
+        height: 4px;
 
         background: #fff;
         padding: 2.4rem 1.6rem;
@@ -129,5 +149,16 @@ export const SearchCities = styled.div`
         justify-content: center;
 
         cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+        input {
+            height: 6px;
+            font-size: 2.4rem;
+        }
+
+        button {
+            height: 6px;
+        }
     }
 `;

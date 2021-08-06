@@ -8,6 +8,7 @@ type WeatherContextData = {
     getData: () => void;
     getCityName: (cityName: string) => void;
     capitalsData: any;
+    isSearched: boolean;
 };
 
 type WeatherContextProviderProps = {
@@ -26,11 +27,13 @@ export function WeatherContextProvider({
     const [weatherData, setWeatherData] = useState(null);
     const [city, setCity] = useState("");
     const [capitalsData, setCapitalsData] = useState<any>([]);
+    const [isSearched, setIsSearched] = useState(false);
 
     const getData = async () => {
         try {
             const data = await getWeatherData(city);
             setWeatherData(data);
+            setIsSearched(true);
         } catch (error) {
             console.log(error.message);
         }
@@ -81,6 +84,7 @@ export function WeatherContextProvider({
                 getData,
                 getCityName,
                 capitalsData,
+                isSearched,
             }}
         >
             {children}

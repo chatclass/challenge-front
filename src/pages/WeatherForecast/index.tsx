@@ -13,7 +13,8 @@ import { useContext } from "react";
 import { WeatherContext } from "../../context/WeatherContext";
 
 export function WeatherForecast() {
-    const { weatherData, getData, getCityName } = useContext(WeatherContext);
+    const { weatherData, getData, getCityName, isSearched } =
+        useContext(WeatherContext);
 
     function capitalize(str: string) {
         return str.charAt(0).toUpperCase() + str.substr(1);
@@ -25,7 +26,9 @@ export function WeatherForecast() {
 
     return (
         <WeatherForecastContainer>
-            <h1>Previsão do tempo</h1>
+            <h1 className={`${isSearched ? "reduced" : ""}`}>
+                Previsão do tempo
+            </h1>
 
             {weatherData !== null ? (
                 <CitySearched>
@@ -43,7 +46,6 @@ export function WeatherForecast() {
                                 {capitalize(weatherData.weather[0].description)}
                             </span>
                         </div>
-
                         <ClimeInfos>
                             <div className="min-max-temperature">
                                 <span className="min">
