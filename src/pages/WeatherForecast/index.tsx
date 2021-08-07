@@ -8,13 +8,20 @@ import {
 import searchImg from "../../assets/search-icon.svg";
 import arrowUpImg from "../../assets/arrow-up-icon.svg";
 import arrowDownImg from "../../assets/arrow-down-icon.svg";
+import closeImg from "../../assets/close-icon.svg";
 
 import { useContext } from "react";
 import { WeatherContext } from "../../context/WeatherContext";
 
 export function WeatherForecast() {
-    const { weatherData, getData, getCityName, isSearched } =
-        useContext(WeatherContext);
+    const {
+        weatherData,
+        getData,
+        getCityName,
+        isSearched,
+        isClosed,
+        closeForecase,
+    } = useContext(WeatherContext);
 
     function capitalize(str: string) {
         return str.charAt(0).toUpperCase() + str.substr(1);
@@ -30,8 +37,15 @@ export function WeatherForecast() {
                 Previsão do tempo
             </h1>
 
-            {weatherData !== null ? (
+            {weatherData !== null && !isClosed ? (
                 <CitySearched>
+                    <button onClick={() => closeForecase()}>
+                        <img
+                            className="close"
+                            src={closeImg}
+                            alt="Fechar previsão"
+                        />
+                    </button>
                     <div className="day-state">
                         <span className="location">
                             {weatherData.name} - {weatherData.sys.country}

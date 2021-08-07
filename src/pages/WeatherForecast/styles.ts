@@ -30,10 +30,19 @@ export const WeatherForecastContainer = styled.div`
 `;
 
 export const CitySearched = styled.div`
+    position: relative;
     width: 100%;
 
     background: #fff;
     padding: 2.4rem;
+
+    .close {
+        position: absolute;
+        right: 1.6rem;
+        top: 1.6rem;
+
+        cursor: pointer;
+    }
 
     .day-state {
         padding: 0 2.4rem;

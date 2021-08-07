@@ -6,9 +6,11 @@ import { getWeatherData } from "../data/api";
 type WeatherContextData = {
     weatherData: any;
     getData: () => void;
+    closeForecase: () => void;
     getCityName: (cityName: string) => void;
     capitalsData: any;
     isSearched: boolean;
+    isClosed: boolean;
 };
 
 type WeatherContextProviderProps = {
@@ -28,12 +30,18 @@ export function WeatherContextProvider({
     const [city, setCity] = useState("");
     const [capitalsData, setCapitalsData] = useState<any>([]);
     const [isSearched, setIsSearched] = useState(false);
+    const [isClosed, setIsClosed] = useState(false);
+
+    useEffect(() => {
+        getCapitals();
+    }, []);
 
     const getData = async () => {
         try {
             const data = await getWeatherData(city);
             setWeatherData(data);
             setIsSearched(true);
+            setIsClosed(false);
         } catch (error) {
             console.log(error.message);
         }
@@ -44,21 +52,13 @@ export function WeatherContextProvider({
             const data = await getWeatherData(cityName);
             capitalsData.push(data);
             setCapitalsData(capitalsData);
+            console.log(capitalsData);
         } catch (error) {
             console.log(error.message);
         }
     };
 
-    useEffect(() => {
-        getCapitals();
-        console.log("capitals >>>>", capitalsData);
-    }, []);
-
-    function getCityName(cityName: string) {
-        setCity(cityName);
-    }
-
-    async function getCapitals() {
+    function getCapitals() {
         const capitals: CapitalsProps[] = [
             { name: "Rio de Janeiro" },
             { name: "São Paulo" },
@@ -77,6 +77,14 @@ export function WeatherContextProvider({
         }
     }
 
+    function getCityName(cityName: string) {
+        setCity(cityName);
+    }
+
+    function closeForecase() {
+        setIsClosed(true);
+    }
+
     return (
         <WeatherContext.Provider
             value={{
@@ -85,6 +93,8 @@ export function WeatherContextProvider({
                 getCityName,
                 capitalsData,
                 isSearched,
+                closeForecase,
+                isClosed,
             }}
         >
             {children}

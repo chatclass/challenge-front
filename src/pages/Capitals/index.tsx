@@ -4,7 +4,6 @@ import { CapitalsWeather, CapitalsContainer } from "./styles";
 
 export function Capitals() {
     const { capitalsData } = useContext(WeatherContext);
-    console.log(capitalsData);
 
     return (
         <CapitalsContainer>
