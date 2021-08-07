@@ -40,7 +40,7 @@ This is the challenge layout
   <img alt="Letmeask" title="#Letmeask" src=".github/mobile_layout-2.png" width="300px" height="460px">
 </p>
 
----2
+---
 
 ## :rocket: Getting Started
 
