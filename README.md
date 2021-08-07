@@ -1,46 +1,100 @@
-# Getting Started with Create React App
+<h1 align="center">
+    Desafio Frontend
+</h1>
+<h1 align="center">
+    <img alt="Icon" title="#Icon" src="https://static.wixstatic.com/media/7f8adc_d803ec63e9e443a288209456ce076e0f~mv2.png/v1/fill/w_132,h_26,al_c,q_85,usm_0.66_1.00_0.01/ChatClass_logo.webp"/>
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+    <a href="#headphones-about">About</a> •
+    <a href="#computer-layout">Layout</a> •
+    <a href="#rocket-getting-started">Getting Started</a> • 
+    <a href="#microscope-technologies">Technologies</a> • 
+    <a href="#pencil2-author">Author</a> • 
+    <a href="#pencil-license">License</a>
+</p>
 
-## Available Scripts
+## :headphones: About
 
-In the project directory, you can run:
+The challenge consist in an app to search a city and get its weather information.
 
-### `yarn start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## :computer: Layout
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This is the challenge layout
 
-### `yarn test`
+### :globe_with_meridians: Web
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="center">
+  <img alt="Letmeask" title="#Letmeask" src=".github/web_layout.png" width="400px" height="200px">
 
-### `yarn build`
+  <img alt="Letmeask" title="#Letmeask" src=".github/web_layout-2.png" width="400px" height="200px">
+</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### :iphone: Web Mobile
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<p align="center" style="display: flex; align-items: flex-start; justify-content: space-around;">
+  <img alt="Letmeask" title="#Letmeask" src=".github/mobile_layout.png" width="300px" height="460px">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  <img alt="Letmeask" title="#Letmeask" src=".github/mobile_layout-2.png" width="300px" height="460px">
+</p>
 
-### `yarn eject`
+---2
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## :rocket: Getting Started
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Requirements
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+-   You need to install both [Node.js](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/) to run this project.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**Clone the project and access the folder**
 
-## Learn More
+```bash
+$ git clone https://github.com/FabioRamos12/challenge-front.git && cd challenge-front
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Follow the steps below**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+# Install the dependencies
+$ yarn
+
+# Run the project
+$ yarn start
+```
+
+The app will be available for access on your browser at `http://localhost:3000`
+
+---
+
+## :microscope: Technologies
+
+This project was developed using the following technologies:
+
+-   [React](https://reactjs.org)
+-   [TypeScript](https://www.typescriptlang.org/)
+-   [Styled Components](https://styled-components.com/)
+-   [Axios](https://axios-http.com/docs/intro)
+
+---
+
+## :pencil2: Author
+
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/34969286?s=400&u=15eb378fc8be34ee27c691a916634fe9a7a999a0&v=4" width="100px;" alt="Fabio Ramos"/>
+ <span>Fabio Ramos</span>
+
+[![Linkedin Badge](https://img.shields.io/badge/-FabioRamos-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/fabioalvesramos/)](https://www.linkedin.com/in/fabioalvesramos/)
+[![Gmail Badge](https://img.shields.io/badge/-fabioalvesramos12@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:fabioalvesramos12@gmail.com)](mailto:fabioalvesramos12@gmail.com)
+
+---
+
+## :pencil: License
+
+This project is under the license [MIT](./LICENSE).
+
+---
+
+```
+
+```
