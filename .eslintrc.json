@@ -1,13 +1,12 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es6": true
   },
   "extends": [
     "plugin:react/recommended",
     "airbnb",
     "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
     "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
@@ -20,16 +19,15 @@
   },
   "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
   "rules": {
+    "camelcase": "off",
+    "@typescript-eslint/camelcase": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
     "react/jsx-props-no-spreading": "off",
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "prettier/prettier": "error",
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": [
-      "warn",
-      {
-        "additionalHooks": "useRecoilCallback"
-      }
-    ],
+    "react-hooks/exhaustive-deps": ["warn"],
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "import/prefer-default-export": "off",
     "no-unused-expressions": "off",

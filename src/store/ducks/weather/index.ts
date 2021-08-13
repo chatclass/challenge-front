@@ -1,23 +1,29 @@
 import { Reducer } from 'redux';
-import { WeatherState, WeatherTypes } from './types';
+import { weatherState, weatherTypes } from './types';
 
-const INITIAL_STATE: WeatherState = {
+const INITIAL_STATE: weatherState = {
   data: undefined,
   error: false,
   loading: false,
 };
 
-const reducer: Reducer<WeatherState> = (state = INITIAL_STATE, action) => {
+const reducer: Reducer<weatherState> = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case WeatherTypes.LOAD_REQUEST:
+    case weatherTypes.FETCH_WEATHER_REQUEST:
       return { ...state, loading: true };
-    case WeatherTypes.LOAD_SUCCCES:
+    case weatherTypes.FETCH_WEATHER_SUCCCES:
       return {
-      ...state, loading: false, error: false, data: action.payload.data,
+        ...state,
+        loading: false,
+        error: false,
+        data: action.payload.data,
       };
-    case WeatherTypes.LOAD_FAILURE:
+    case weatherTypes.FETCH_WEATHER_FAILURE:
       return {
-      ...state, loading: false, error: true, data: undefined,
+        ...state,
+        loading: false,
+        error: true,
+        data: undefined,
       };
     default:
       return state;

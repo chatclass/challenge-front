@@ -1,18 +1,27 @@
-import { call, put } from 'redux-saga/effects';
+import { AxiosResponse } from 'axios';
+import { all, call, put, takeLatest } from 'redux-saga/effects';
 import api from '../../../services/api';
 
-import { loadSuccess, loadFailure } from './actions';
-import { CityWeather } from './types';
+import { fetchWeatherSuccess, fetchWeatherFailure } from './actions';
+import { forecast, weatherTypes } from './types';
 
-const getWeather = () => 
-  api.get<CityWeather>('users/urieloliveira/repos');
+const getWeather = (city: string) =>
+  api.get<forecast>(
+    `/forecast?appid=1b7ef83880806bcc2d5a4cb079b3c083&units=metric&lang=pt_br&q=${city}`,
+  );
 
-export function* load() {
+export function* fetchWeather({ payload: { city } }: any) {
   try {
-    const response = yield call(getWeather);
+    const response: AxiosResponse<forecast> = yield call(getWeather, city);
 
-    yield put(loadSuccess(response.data));
+    yield put(fetchWeatherSuccess(response.data));
   } catch (err) {
-    yield put(loadFailure());
+    yield put(fetchWeatherFailure());
   }
 }
+
+function* weatherSaga() {
+  yield all([takeLatest(weatherTypes.FETCH_WEATHER_REQUEST, fetchWeather)]);
+}
+
+export default weatherSaga;
