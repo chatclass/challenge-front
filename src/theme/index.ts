@@ -7,33 +7,6 @@ export const colors = {
   black: '#222222',
 };
 
-export const typography = {
-  h1: {
-    fontSize: 48,
-    letterSpacing: -1.5,
-  },
-  h2: {
-    fontSize: 32,
-    letterSpacing: -0.5,
-  },
-  h3: {
-    fontSize: 26,
-    letterSpacing: 0,
-  },
-  subtitle: {
-    fontSize: 14,
-    letterSpacing: 0.15,
-  },
-  body: {
-    fontSize: 18,
-    letterSpacing: 0.5,
-  },
-  caption: {
-    fontSize: 12,
-    letterSpacing: 0.4,
-  },
-};
-
 export const breakpoint = {
   xs: 0,
   sm: 576,
