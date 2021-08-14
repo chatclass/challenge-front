@@ -18,7 +18,7 @@ const Capitals: React.FC = () => {
         'belo horizonte',
         'brasilia',
         'belem',
-        'salvador',
+        'goiania',
         'curitiba',
         'fortaleza',
         'manaus',

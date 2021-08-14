@@ -10,9 +10,13 @@ import {
 } from './actions';
 import { cityWeather, forecast, weatherTypes } from './types';
 
+const apiKey = '1b7ef83880806bcc2d5a4cb079b3c083';
+const units = 'metric';
+const lang = 'pt_br';
+
 const getWeather = (city: string) =>
   api.get<forecast>(
-    `/forecast?appid=1b7ef83880806bcc2d5a4cb079b3c083&units=metric&lang=pt_br&q=${city}`,
+    `/forecast?appid=${apiKey}&units=${units}&lang=${lang}&q=${city}`,
   );
 
 const getWeatherCapitals = (city: string) =>
@@ -39,7 +43,6 @@ export function* fetchWeatherCapitals({ payload: { cities } }: any) {
         cities[i],
       );
       response.push(data);
-      console.log(response);
     }
 
     yield put(fetchWeatherCapitalsSuccess(response));
