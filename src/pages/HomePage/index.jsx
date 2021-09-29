@@ -1,14 +1,15 @@
+import { ThemeProvider } from 'styled-components';
+import Header from '../../components/Header';
+import theme from '../../theme';
+
 const HomePage = () => (
-  <>
-    <header>
-      <h1>Previsão do tempo</h1>
-      <input type="search" name="search" id="search" />
-    </header>
+  <ThemeProvider theme={theme}>
+    <Header />
     <main>
       <h2>Capitais</h2>
       <section>tabela</section>
     </main>
-  </>
+  </ThemeProvider>
 );
 
 export default HomePage;

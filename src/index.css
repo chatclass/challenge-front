@@ -7,10 +7,6 @@
 body {
   min-height: 100vh;
 
-  background: rgb(255, 127, 0);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 127, 0, 1) 0%,
-    rgba(255, 187, 0, 1) 100%
-  );
+  background: #e2aa72;
+  background: linear-gradient(180deg, #ff7f00 0%, #ffbb00 100%);
 }
