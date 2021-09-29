@@ -1,0 +1,55 @@
+{
+  "name": "chatclass-test",
+  "version": "0.0.0",
+  "author": {
+    "name": "João Paulo Moraes",
+    "email": "joaopaulomoraes@outlook.com",
+    "url": "https://github.com/joaopaulomoraes"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview",
+    "test": "jest",
+    "lint": "eslint src --max-warnings=0"
+  },
+  "dependencies": {
+    "axios": "^0.21.4",
+    "lodash.debounce": "^4.0.8",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "styled-components": "^5.3.1",
+    "styled-reset": "^4.3.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.14.5",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@types/jest": "^26.0.24",
+    "@types/lodash.debounce": "^4.0.6",
+    "@types/node": "^16.3.2",
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.9",
+    "@types/styled-components": "^5.1.14",
+    "@typescript-eslint/eslint-plugin": "^4.28.3",
+    "@vitejs/plugin-react": "^1.0.0",
+    "autoprefixer": "^10.3.1",
+    "babel-jest": "^27.0.6",
+    "babel-plugin-styled-components": "^1.13.2",
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-tailwindcss": "^1.14.1",
+    "jest": "^27.0.6",
+    "jest-styled-components": "^7.0.5",
+    "postcss": "^8.3.5",
+    "prettier": "2.3.2",
+    "typescript": "^4.3.2",
+    "vite": "^2.5.4"
+  }
+}

@@ -1,35 +1,62 @@
-# Desafio-Frontend
+# ChatClass Weather Test
 
-![alt tag](https://static.wixstatic.com/media/7f8adc_d803ec63e9e443a288209456ce076e0f~mv2.png/v1/fill/w_132,h_26,al_c,q_85,usm_0.66_1.00_0.01/ChatClass_logo.webp)
+A simple app that shows the weather information of a particular city.
 
-## Bem-vindo
+## What is inside?
 
-A ChatClass é uma Edtech fundada em Nova York, que ajuda empresas a educarem funcionários e clientes por meio da Aprendizagem Conversacional. A plataforma utiliza ferramentas presentes no dia a dia dos brasileiros, como o Whatsapp, e já impactou mais de 500 mil alunos.
+This project uses lot of stuff as:
 
-## Como participar
+- [ReactJS](https://reactjs.org)
+- [Styled-Components](https://styled-components.com)
+- [Jest](https://jestjs.io)
+- [Testing Library](https://testing-library.com/)
+- [TypeScript](https://www.typescriptlang.org)
+- [Vite](https://vitejs.dev)
+- [Eslint](https://eslint.org)
+- [Prettier](https://prettier.io)
 
-* Crie um novo fork e branch com seu nome-sobrenome e faça um pull request quando estiver pronto. Iremos fazer code review.
-* Envie um email para leo@chatclass.com.br para te adicionarmos ao time slack do desafio.
+## Getting Started
 
-## O desafio
+### Installing
 
-Vamos dar uma olhada na previsão do tempo? A meta é criarmos uma página simples, que consuma a API do Yahoo de previsão do tempo (https://developer.yahoo.com/weather/). O layout final deverá ficar o mais próximo possível da versão abaixo (sim, vamos ter a versão responsiva mobile e a versão desktop):
+Cloning the project.
 
-Web:
+```bash
+git glone https://github.com/chatclass/challenge-front.git chatclass-test
+```
 
-![alt tag](https://s3-us-west-1.amazonaws.com/1sti/desafio-desktop1.png)
+Access the project directory.
 
-![alt tag](https://s3-us-west-1.amazonaws.com/1sti/desafio-desktop2.png)
+```bash
+cd chatclass-test
+```
 
-Mobile responsivo:
+Configure your environment. You will need a [HG API](https://hgbrasil.com/status/weather) api key.
 
-![alt tag](https://s3-us-west-1.amazonaws.com/1sti/desafio-mobile1.png)
+```bash
+cp .env.example .env
+```
 
-![alt tag](https://s3-us-west-1.amazonaws.com/1sti/desafio-mobile2.png)
+Install dependencies.
 
-## Dicas
-* Utilizar react.js ou com redux ou hooks.
-* Componente o mais semântico possível.
-* Branches com readme e instruções de implantação serão bem vindos.
-* Styled component
-* Que tal utilizar BEM nos identificadores css? http://getbem.com/naming/ 
+```bash
+npm install
+```
+
+Serve with hot reload at <http://localhost:3000>.
+
+```bash
+npm run dev
+```
+
+### Test
+
+```bash
+npm run build
+```
+
+### Build
+
+```bash
+npm run test
+```

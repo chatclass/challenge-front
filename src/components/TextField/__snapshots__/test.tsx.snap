@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextField /> Renders with error 1`] = `
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 0.2rem;
+  padding: 0 1rem;
+  border: 0.01rem solid;
+  border-color: #777E90;
+  background-color: white;
+}
+
+.c2:focus-within {
+  box-shadow: 0 0 0.2rem #23262F;
+}
+
+.c5 {
+  font-size: 1rem;
+  color: #141416;
+  padding: .75rem 0;
+  padding-left: 1rem;
+  border: 0;
+  outline: none;
+  width: 100%;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #ff7f00;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+}
+
+.c4 > svg {
+  width: 2.2rem;
+  height: 100%;
+  color: #353945;
+}
+
+.c6 {
+  margin: 1rem;
+  color: #FCFCFD;
+  font-size: 1rem;
+}
+
+.c0 .c1 {
+  border-color: #ff7f00;
+}
+
+.c0 .c3 {
+  color: #ff7f00;
+}
+
+@media (min-width:768px) {
+  .c5 {
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1 c2"
+  >
+    <div
+      class="c3 c4"
+    >
+      <svg
+        data-testid="icon"
+        fill="currentColor"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
+        <path
+          d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+        />
+      </svg>
+    </div>
+    <input
+      class="c5"
+      type="text"
+      value=""
+    />
+  </div>
+  <p
+    class="c6"
+  >
+    Error message
+  </p>
+</div>
+`;

@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Container /> should render the Container with a children 1`] = `
+.c0 {
+  width: 768px;
+  margin: 0 auto;
+}
+
+@media (min-width:320px) {
+  .c0 {
+    width: 100%;
+  }
+}
+
+<div
+  class="c0"
+>
+  Children
+</div>
+`;
+
+exports[`<Container /> should render the Container with an element 1`] = `
+.c0 {
+  width: 768px;
+  margin: 0 auto;
+}
+
+@media (min-width:320px) {
+  .c0 {
+    width: 100%;
+  }
+}
+
+<div
+  class="c0"
+>
+  <dl>
+    <dt>
+      Head
+    </dt>
+    <dd>
+      Body
+    </dd>
+  </dl>
+</div>
+`;
