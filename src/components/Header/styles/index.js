@@ -12,8 +12,8 @@ const HeaderStyles = styled.header`
   & .header {
     &__title {
       color: ${(props) => props.theme.colorWhite};
-      font-family: ${(props) => props.theme.fontFamily};
-      font-size: ${(props) => props.theme.titleFontSize};
+      font-family: ${(props) => props.theme.primaryfontFamily};
+      font-size: ${(props) => props.theme.primaryTitleSize};
 
       padding: 2.5rem;
     }
@@ -30,7 +30,7 @@ const HeaderStyles = styled.header`
     &__input-search {
       width: 100%;
 
-      font-family: ${(props) => props.theme.fontFamily};
+      font-family: ${(props) => props.theme.primaryfontFamily};
 
       padding: 0.5rem 1rem;
     }
