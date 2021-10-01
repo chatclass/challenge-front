@@ -15,7 +15,14 @@ const HeaderStyles = styled.header`
       font-family: ${(props) => props.theme.primaryfontFamily};
       font-size: ${(props) => props.theme.primaryTitleSize};
 
-      padding: 2.5rem;
+      padding: 2.5rem 2rem;
+      align-self: flex-start;
+      transition: all 0.3s;
+
+      &.opened-details {
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+      }
     }
 
     &__error-message {
@@ -39,6 +46,11 @@ const HeaderStyles = styled.header`
 
       display: flex;
       align-items: center;
+
+      &.opened-details {
+        padding-top: 1rem;
+        padding-bottom: 1.5rem;
+      }
     }
 
     &__input {

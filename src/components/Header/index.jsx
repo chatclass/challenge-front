@@ -3,16 +3,18 @@ import { useContext, useEffect, useRef, useState } from 'react';
 import HeaderStyles from './styles';
 
 import Context from '../../providers/Context';
-import getCityId from './logic/get-city-id';
-import apiKey from '../../data/api-key';
+import CityDetails from '../CityDetails';
 import Loading from '../Loading';
+import getCityId from './logic/get-city-id';
 
 const Header = () => {
   const [value, setValue] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
 
-  const { setCitySearch } = useContext(Context);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+
+  const { setCitySearch, isOpenDetails, setIsOpenDetails } =
+    useContext(Context);
 
   const inputRef = useRef(null);
 
@@ -20,57 +22,45 @@ const Header = () => {
     inputRef.current.focus();
   }, []);
 
-  const fetchData = async () => {
-    setLoading(true);
-
-    const cityID = await getCityId(value);
-
-    if (cityID === 'Cidade não encontrado') {
-      setLoading(false);
-      setError(true);
-    } else {
-      const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?id=${cityID}&appid=${apiKey}&units=metric`,
-      );
-
-      if (response.ok) {
-        const data = await response.json();
-
-        setLoading(false);
-        setCitySearch(data);
-      }
-
-      if (!response.ok) {
-        setLoading(false);
-        setError(true);
-      }
-    }
-  };
-
   const handleChange = (e) => {
     setValue(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     setValue('');
-    fetchData();
+    setIsLoading(true);
+
+    const id = await getCityId(value);
+
+    if (id === 'Cidade não encontrado') {
+      setIsLoading(false);
+      setIsError(true);
+    } else {
+      setIsLoading(false);
+      setCitySearch(id);
+      setIsOpenDetails(true);
+    }
   };
 
   return (
     <HeaderStyles>
-      <h1 className="header__title">Previsão do tempo</h1>
+      <h1 className={`header__title ${isOpenDetails && 'opened-details'}`}>
+        Previsão do tempo
+      </h1>
 
-      {loading && <Loading />}
+      {isLoading && <Loading />}
 
-      {!loading && error && (
-        <h2 className="header__error-message">Cidade não encontrada</h2>
+      {!isLoading && isError && (
+        <h3 className="header__error-message">Cidade não encontrada</h3>
       )}
+
+      {!isLoading && !isError && isOpenDetails && <CityDetails />}
 
       <form onSubmit={handleSubmit} className="header__form">
         <label
-          className="form__label"
+          className={`form__label ${isOpenDetails && 'opened-details'}`}
           htmlFor="input-search"
           aria-label="Pesquisar por clima de cidade"
         >
