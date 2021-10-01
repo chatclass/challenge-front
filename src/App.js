@@ -1,7 +1,12 @@
 import HomePage from './pages/HomePage';
+import ContextProvider from './providers/ContextProvider';
 
 function App() {
-  return <HomePage />;
+  return (
+    <ContextProvider>
+      <HomePage />
+    </ContextProvider>
+  );
 }
 
 export default App;
