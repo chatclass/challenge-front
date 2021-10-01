@@ -18,6 +18,15 @@ const HeaderStyles = styled.header`
       padding: 2.5rem;
     }
 
+    &__error-message {
+      color: ${(props) => props.theme.colorWhite};
+      font-family: ${(props) => props.theme.primaryfontFamily};
+      font-size: 1rem;
+
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+
     &__form {
       width: 100%;
       padding: 0 1.5rem;
