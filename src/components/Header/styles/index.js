@@ -18,16 +18,21 @@ const HeaderStyles = styled.header`
       padding: 2.5rem;
     }
 
-    &__label-search {
+    &__form {
       width: 100%;
-
       padding: 0 1.5rem;
+    }
+  }
+
+  & .form {
+    &__label {
+      width: 100%;
 
       display: flex;
       align-items: center;
     }
 
-    &__input-search {
+    &__input {
       width: 100%;
 
       font-family: ${(props) => props.theme.primaryfontFamily};
@@ -35,7 +40,12 @@ const HeaderStyles = styled.header`
       padding: 0.5rem 1rem;
     }
 
-    &__img-search {
+    &__btn {
+      border: none;
+      background: none;
+    }
+
+    &__img {
       margin-left: -2.5rem;
     }
   }
