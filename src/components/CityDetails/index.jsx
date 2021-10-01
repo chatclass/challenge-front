@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useContext, useState, useEffect } from 'react';
 
 import SectionStyled from './styles';

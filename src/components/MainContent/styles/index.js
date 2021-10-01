@@ -1,9 +1,22 @@
 import styled from 'styled-components';
 
 const MainStyled = styled.main`
+  @media screen and (min-width: 900px) {
+    max-width: 35rem;
+
+    margin: 0 auto;
+  }
+
   & .main {
     &__section {
       padding: 0 1.5rem;
+
+      @media screen and (min-width: 900px) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
     }
 
     &__title {

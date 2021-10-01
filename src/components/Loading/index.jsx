@@ -1,4 +1,5 @@
 import { bool } from 'prop-types';
+
 import SectionStyled from './styles';
 
 const Loading = ({ orange }) => (

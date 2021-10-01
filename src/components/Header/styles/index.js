@@ -3,11 +3,18 @@ import styled from 'styled-components';
 const HeaderStyles = styled.header`
   min-height: 18rem;
 
+  margin: 0 auto;
+
   border-bottom: 2px solid ${(props) => props.theme.colorWhite};
 
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (min-width: 900px) {
+    max-width: 35rem;
+    min-height: 15rem;
+  }
 
   & .header {
     &__title {
@@ -37,12 +44,19 @@ const HeaderStyles = styled.header`
     &__form {
       width: 100%;
       padding: 0 1.5rem;
+
+      @media screen and (min-width: 900px) {
+        padding-top: 1rem;
+      }
     }
   }
 
   & .form {
     &__label {
       width: 100%;
+      max-width: 25rem;
+
+      margin: 0 auto;
 
       display: flex;
       align-items: center;
