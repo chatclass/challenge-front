@@ -4,9 +4,12 @@ import Context from './Context';
 
 const ContextProvider = ({ children }) => {
   const [citySearch, setCitySearch] = useState('');
+  const [isOpenDetails, setIsOpenDetails] = useState(false);
 
   return (
-    <Context.Provider value={{ citySearch, setCitySearch }}>
+    <Context.Provider
+      value={{ citySearch, setCitySearch, isOpenDetails, setIsOpenDetails }}
+    >
       {children}
     </Context.Provider>
   );

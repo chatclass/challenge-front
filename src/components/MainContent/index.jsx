@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react';
 
 import MainStyled from './styles';
@@ -11,17 +12,16 @@ const MainContent = () => {
   const [capitals, setCapitals] = useState([]);
 
   useEffect(() => {
-    const dataCapitals = getCapitals().map((capital) =>
-      fetch(
-        `https://api.openweathermap.org/data/2.5/weather?id=${capital.id}&appid=${apiKey}&units=metric`,
-      )
-        .then((response) => response.json())
-        .then((data) => getInfo(data)),
-    );
-
-    Promise.all(dataCapitals).then((data) => {
-      setCapitals(data);
-    });
+    // const dataCapitals = getCapitals().map((capital) =>
+    //   fetch(
+    //     `https://api.openweathermap.org/data/2.5/weather?id=${capital.id}&appid=${apiKey}&units=metric`,
+    //   )
+    //     .then((response) => response.json())
+    //     .then((data) => getInfo(data)),
+    // );
+    // Promise.all(dataCapitals).then((data) => {
+    //   setCapitals(data);
+    // });
   }, []);
 
   return (
