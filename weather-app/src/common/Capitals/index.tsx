@@ -3,9 +3,8 @@ import { Text } from '..';
 import { Loading } from '../Loading';
 import {
   CapitalsList,
-  CapitalsListHeader,
   CapitalsListHeaderText,
-  CapitalsListItem,
+  CapitalsListLine,
   CapitalsListItemText,
   CapitalsListWrapper,
   CapitalsWrapper,
@@ -37,16 +36,16 @@ export const Capitals = () => {
       <CapitalsListWrapper>
         {[weathers.slice(0, 5), weathers.slice(5)].map((capitals, i) => (
           <CapitalsList key={i}>
-            <CapitalsListHeader>
+            <CapitalsListLine>
               <CapitalsListHeaderText>Min</CapitalsListHeaderText>
               <CapitalsListHeaderText>Máx</CapitalsListHeaderText>
-            </CapitalsListHeader>
+            </CapitalsListLine>
             {capitals.map((capital, j) => (
-              <CapitalsListItem key={j}>
+              <CapitalsListLine key={j}>
                 <CapitalsListItemText>{`${capital.min}°`}</CapitalsListItemText>
                 <CapitalsListItemText>{`${capital.max}°`}</CapitalsListItemText>
                 <CapitalsListItemText>{`${capital.name}`}</CapitalsListItemText>
-              </CapitalsListItem>
+              </CapitalsListLine>
             ))}
           </CapitalsList>
         ))}

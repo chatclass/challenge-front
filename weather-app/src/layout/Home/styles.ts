@@ -16,6 +16,21 @@ export const ContentWrapper = styled.div`
   align-items: center;
   min-height: 100vh;
   width: auto;
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
+`;
+
+export const TitleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 480px) {
+    margin-left: 40px;
+  }
 `;
 
 export const Line = styled.div`

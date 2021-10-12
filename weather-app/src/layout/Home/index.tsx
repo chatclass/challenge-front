@@ -2,13 +2,20 @@ import { Text } from '@/common';
 import { Capitals } from '@/common/Capitals';
 import Head from 'next/head';
 import Image from 'next/image';
-import { useState, useRef } from 'react';
-import { Wrapper, Line, Input, ContentWrapper, InputWrapper } from './styles';
+import { useRef, KeyboardEvent } from 'react';
+import {
+  Wrapper,
+  Line,
+  Input,
+  ContentWrapper,
+  InputWrapper,
+  TitleWrapper,
+} from './styles';
 
 export const Home = () => {
   const inputValue = useRef<HTMLInputElement>(null);
 
-  const handleEnterOnSearch = (e: React.KeyboardEvent<HTMLDivElement>) => {
+  const handleEnterOnSearch = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       console.log('ENTER', inputValue.current?.value);
     }
@@ -23,7 +30,9 @@ export const Home = () => {
       </Head>
       <Wrapper>
         <ContentWrapper>
-          <Text text="Previsão do tempo" type={'h1'} />
+          <TitleWrapper>
+            <Text text="Previsão do tempo" type={'h1'} />
+          </TitleWrapper>
           <InputWrapper>
             <Input
               placeholder="Insira aqui o nome da cidade"

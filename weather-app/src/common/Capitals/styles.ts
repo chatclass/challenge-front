@@ -6,51 +6,46 @@ export const CapitalsWrapper = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   width: auto;
-  transition: 500ms;
+
+  @media screen and (max-width: 480px) {
+    margin-left: 40px;
+  }
 `;
 
 export const CapitalsListWrapper = styled.div`
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
   margin-top: 16px;
+
+  @media screen and (max-width: 480px) {
+    table:nth-child(2) > tr > th {
+      display: none;
+    }
+  }
 `;
 
-export const CapitalsList = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+export const CapitalsList = styled.table`
   margin-right: 32px;
 `;
 
-export const CapitalsListHeader = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-bottom: 16px;
-`;
+export const CapitalsListLine = styled.tr``;
 
-export const CapitalsListHeaderText = styled.span`
+export const CapitalsListHeaderText = styled.th`
   font-size: 0.8rem;
-  font-weight: 200;
+  font-weight: 300;
   color: #000;
-  margin-right: 8px;
+  text-align: right;
+  padding-bottom: 16px;
+  padding-right: 8px;
 `;
 
-export const CapitalsListItem = styled.span`
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-bottom: 16px;
-`;
-
-export const CapitalsListItemText = styled.span`
+export const CapitalsListItemText = styled.td`
   font-size: 1rem;
   font-weight: 500;
-  color: #212121;
-  margin-right: 8px;
+  color: #000;
+  padding-bottom: 16px;
+  padding-right: 8px;
 `;
