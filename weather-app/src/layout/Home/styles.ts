@@ -6,5 +6,46 @@ export const Wrapper = styled.main`
   align-items: center;
   min-height: 100vh;
 
-  font-family: 'Roboto';
+  background: linear-gradient(#ff7f00, #ffb900);
+`;
+
+export const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: auto;
+`;
+
+export const Line = styled.div`
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  margin: 20px 0;
+`;
+
+export const InputWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  height: 50px;
+  margin: 40px 0;
+  padding: 0 20px;
+  background: #fff;
+  outline: none;
+  border: 1px solid #dc7000;
+`;
+
+export const Input = styled.input`
+  flex: 1 0;
+  min-width: 50px;
+  min-height: 25px;
+  margin-right: 8px;
+  font-size: 1.2rem;
+  color: #888;
+  background: transparent;
+  outline: none;
+  border: none;
 `;
