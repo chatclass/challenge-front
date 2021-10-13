@@ -7,7 +7,7 @@ export const CapitalsWrapper = styled.div`
   align-items: flex-start;
   width: auto;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 500px) {
     margin-left: 40px;
   }
 `;
@@ -20,8 +20,8 @@ export const CapitalsListWrapper = styled.div`
   flex-wrap: wrap;
   margin-top: 16px;
 
-  @media screen and (max-width: 480px) {
-    table:nth-child(2) > tr > th {
+  @media screen and (max-width: 495px) {
+    table:nth-child(2) > thead > tr > th {
       display: none;
     }
   }
@@ -36,7 +36,7 @@ export const CapitalsListLine = styled.tr``;
 export const CapitalsListHeaderText = styled.th`
   font-size: 0.8rem;
   font-weight: 300;
-  color: #000;
+  color: #222222;
   text-align: right;
   padding-bottom: 16px;
   padding-right: 8px;
@@ -44,8 +44,8 @@ export const CapitalsListHeaderText = styled.th`
 
 export const CapitalsListItemText = styled.td`
   font-size: 1rem;
-  font-weight: 500;
-  color: #000;
+  font-weight: 700;
+  color: #222222;
   padding-bottom: 16px;
   padding-right: 8px;
 `;

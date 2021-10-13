@@ -15,9 +15,10 @@ export const ContentWrapper = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  margin: 24px 0;
   width: auto;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 500px) {
     width: 100%;
   }
 `;
@@ -27,17 +28,12 @@ export const TitleWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 500px) {
     margin-left: 40px;
+    align-self: start;
   }
-`;
-
-export const Line = styled.div`
-  width: 100%;
-  height: 1px;
-  background: #fff;
-  margin: 20px 0;
 `;
 
 export const InputWrapper = styled.div`
@@ -46,7 +42,7 @@ export const InputWrapper = styled.div`
   justify-content: space-between;
   width: 90%;
   height: 50px;
-  margin: 40px 0;
+  margin: 20px 0;
   padding: 0 20px;
   background: #fff;
   outline: none;

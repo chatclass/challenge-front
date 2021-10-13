@@ -36,17 +36,21 @@ export const Capitals = () => {
       <CapitalsListWrapper>
         {[weathers.slice(0, 5), weathers.slice(5)].map((capitals, i) => (
           <CapitalsList key={i}>
-            <CapitalsListLine>
-              <CapitalsListHeaderText>Min</CapitalsListHeaderText>
-              <CapitalsListHeaderText>Máx</CapitalsListHeaderText>
-            </CapitalsListLine>
-            {capitals.map((capital, j) => (
-              <CapitalsListLine key={j}>
-                <CapitalsListItemText>{`${capital.min}°`}</CapitalsListItemText>
-                <CapitalsListItemText>{`${capital.max}°`}</CapitalsListItemText>
-                <CapitalsListItemText>{`${capital.name}`}</CapitalsListItemText>
+            <thead>
+              <CapitalsListLine>
+                <CapitalsListHeaderText>Min</CapitalsListHeaderText>
+                <CapitalsListHeaderText>Máx</CapitalsListHeaderText>
               </CapitalsListLine>
-            ))}
+            </thead>
+            <tbody>
+              {capitals.map((capital, j) => (
+                <CapitalsListLine key={j}>
+                  <CapitalsListItemText>{`${capital.min}°`}</CapitalsListItemText>
+                  <CapitalsListItemText>{`${capital.max}°`}</CapitalsListItemText>
+                  <CapitalsListItemText>{`${capital.name}`}</CapitalsListItemText>
+                </CapitalsListLine>
+              ))}
+            </tbody>
           </CapitalsList>
         ))}
       </CapitalsListWrapper>

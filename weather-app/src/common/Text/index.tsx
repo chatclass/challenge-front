@@ -6,14 +6,22 @@ interface TextProps {
   weight?: string;
   size?: string;
   type?: string;
+  reduced?: boolean;
 }
 
-export const Text = ({ text, color, weight, size, type }: TextProps) => {
+export const Text = ({
+  text,
+  color,
+  weight,
+  size,
+  type,
+  reduced,
+}: TextProps) => {
   const Component =
     type === 'h1' ? MainText : type === 'h2' ? SubText : NormalText;
 
   return (
-    <Component color={color} weight={weight} size={size}>
+    <Component color={color} weight={weight} size={size} reduced={reduced}>
       {text}
     </Component>
   );

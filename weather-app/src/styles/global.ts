@@ -1,4 +1,9 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+
+interface LineProps {
+  color?: string;
+  margin?: string;
+}
 
 export const GlobalStyle = createGlobalStyle`
     * {
@@ -8,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     outline: 0;
     text-decoration: none;
     list-style: none;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
   }
 
   a {
@@ -24,4 +29,11 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     border: none;
   }
+`;
+
+export const Line = styled.div<LineProps>`
+  width: 100%;
+  height: 1px;
+  background: ${props => props.color || '#fff'};
+  margin: ${props => props.margin || '20px 0'};
 `;
