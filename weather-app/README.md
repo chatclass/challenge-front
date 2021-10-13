@@ -18,6 +18,8 @@
 
 Clone the repository and follow the steps below:
 
+1. Get your api credentials at [OpenWeatherAPI](https://openweathermap.org/api) and put it on `.env.local` file following the `.env.example.local` file. After that run the following commands:
+
 ```bash
 # Installing project dependencies
 yarn
