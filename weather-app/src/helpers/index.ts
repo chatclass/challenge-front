@@ -1,13 +1,21 @@
 export const bindingCapitalsWeatherData = (
   weather: ApiWeatherResponse,
 ): CapitalsWeatherData => {
-  const weatherData = {
-    min: weather.main.temp_min.toFixed(0),
-    max: weather.main.temp_max.toFixed(0),
-    name: weather.name,
-  };
+  try {
+    const weatherData = {
+      min: weather.main.temp_min.toFixed(0),
+      max: weather.main.temp_max.toFixed(0),
+      name: weather.name,
+    };
 
-  return weatherData;
+    return weatherData;
+  } catch (error) {
+    return {
+      min: '',
+      max: '',
+      name: '',
+    };
+  }
 };
 
 export const bindingWeatherAndLatLon = (

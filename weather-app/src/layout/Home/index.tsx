@@ -34,7 +34,7 @@ export const Home = () => {
     <>
       <Head>
         <title>Weather App</title>
-        <meta name="description" content="Weather app" />
+        <meta name="description" content="Just a weather app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Wrapper>

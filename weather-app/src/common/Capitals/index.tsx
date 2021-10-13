@@ -9,6 +9,7 @@ import {
   CapitalsListWrapper,
   CapitalsWrapper,
 } from './styles';
+import { Fade } from 'react-awesome-reveal';
 
 export const Capitals = () => {
   const { weathers, loading, error } = useWeathers({
@@ -31,29 +32,31 @@ export const Capitals = () => {
   ) : !weathers || error ? (
     <Text text="Algo de inesperado aconteceu, por favor, tente novamente!" />
   ) : (
-    <CapitalsWrapper>
-      <Text text="Capitais" type={'h2'} />
-      <CapitalsListWrapper>
-        {[weathers.slice(0, 5), weathers.slice(5)].map((capitals, i) => (
-          <CapitalsList key={i}>
-            <thead>
-              <CapitalsListLine>
-                <CapitalsListHeaderText>Min</CapitalsListHeaderText>
-                <CapitalsListHeaderText>Máx</CapitalsListHeaderText>
-              </CapitalsListLine>
-            </thead>
-            <tbody>
-              {capitals.map((capital, j) => (
-                <CapitalsListLine key={j}>
-                  <CapitalsListItemText>{`${capital.min}°`}</CapitalsListItemText>
-                  <CapitalsListItemText>{`${capital.max}°`}</CapitalsListItemText>
-                  <CapitalsListItemText>{`${capital.name}`}</CapitalsListItemText>
+    <Fade direction="up" triggerOnce>
+      <CapitalsWrapper>
+        <Text text="Capitais" type={'h2'} />
+        <CapitalsListWrapper>
+          {[weathers.slice(0, 5), weathers.slice(5)].map((capitals, i) => (
+            <CapitalsList key={i}>
+              <thead>
+                <CapitalsListLine>
+                  <CapitalsListHeaderText>Min</CapitalsListHeaderText>
+                  <CapitalsListHeaderText>Máx</CapitalsListHeaderText>
                 </CapitalsListLine>
-              ))}
-            </tbody>
-          </CapitalsList>
-        ))}
-      </CapitalsListWrapper>
-    </CapitalsWrapper>
+              </thead>
+              <tbody>
+                {capitals.map((capital, j) => (
+                  <CapitalsListLine key={j}>
+                    <CapitalsListItemText>{`${capital.min}°`}</CapitalsListItemText>
+                    <CapitalsListItemText>{`${capital.max}°`}</CapitalsListItemText>
+                    <CapitalsListItemText>{`${capital.name}`}</CapitalsListItemText>
+                  </CapitalsListLine>
+                ))}
+              </tbody>
+            </CapitalsList>
+          ))}
+        </CapitalsListWrapper>
+      </CapitalsWrapper>
+    </Fade>
   );
 };

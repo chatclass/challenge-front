@@ -1,9 +1,22 @@
 import styled from 'styled-components';
 import Image from 'next/image';
+import { Fade } from 'react-awesome-reveal';
 
 interface ForecastWeatherValueProps {
   weight?: string;
 }
+
+export const ForecastFade = styled(Fade)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    padding: 0;
+  }
+`;
 
 export const ForecastWrapper = styled.div`
   display: flex;
@@ -138,15 +151,17 @@ export const ForecastDayWeatherWrapper = styled.div`
   gap: 8px;
 `;
 
-export const ForecastDaysHeader = styled.p`
+const ForecastDayText = styled.p`
   font-size: 1rem;
-  color: #505050;
   font-weight: 700;
+`;
+
+export const ForecastDaysHeader = styled(ForecastDayText)`
+  color: #505050;
+
   margin-bottom: 8px;
 `;
 
-export const ForecastDayWeather = styled.p`
-  font-size: 1rem;
+export const ForecastDayWeather = styled(ForecastDayText)`
   color: #ff7f00;
-  font-weight: 700;
 `;
